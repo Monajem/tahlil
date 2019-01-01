@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'BYekan';
+    src: url('../fonts/BYekan.eot') format('eot'), url('../fonts/BYekan.woff') format('woff'), url('../fonts/BYekan.ttf') format('truetype');
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'BYekan', Helvetica, Arial, sans-serif;
+}
+
+nav{
+    height: 150px
+}
+
+.navbar-brand {
+    font-size: 35px
+}
+
+.navbar-nav {
+    font-size: 25px
+}
+
+.card-wrapper {
+	width: 600px;
+	display: flex;
+	flex-direction: column;
+}
+
+.card {
+	border-color: transparent;
+	box-shadow: 0 0 40px rgba(0,0,0,.05);
+}
+
+.card.fat {
+	padding: 10px;
+}
+
+.card .card-title {
+	margin-bottom: 30px;
+}
+
+.form-control {
+	border-width: 2.3px;
+}
+
+.form-group label {
+	width: 100%;
+}
+
+.btn.btn-block {
+	padding: 12px 10px;
+}
+
+.margin-top20 {
+	margin-top: 20px;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.footer {
+	margin: 40px 0;
+	color: #888;
+	text-align: center;
+}
+
+.vertical-center {
+  min-height: 82%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 82vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -1,23 +1,21 @@
-<nav>
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Getbnb</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <!--<li {% if menu_item == 'listings' %} class="active" {% endif %} ><a href="{% url 'listing-recent' %}">Rooms</a></li>-->
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Host</a></li>
-        <li><a href="#">Messages</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">ملکیران</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">درباره ما</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+          <a class="nav-link" href="{% url 'login' %}"> ورود &nbsp;<i class="fa fa-sign-in-alt"></i></a>
+      </li>
+      <li class="nav-item active ">
+          <a class="nav-link" href="{% url 'register' %}"> ثبت نام &nbsp;   <i class="fa fa-user"></i> </a>
+      </li>
+    </ul>
   </div>
 </nav>
