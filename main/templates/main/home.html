@@ -1,5 +1,94 @@
 {% extends "main/base.html" %}
 
 {%block content%}
-<h1>به ملکیران خوش آمدید!</h1>
+{% load static %}
+     <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('{% static 'main/images/background.jpg'%}');">
+      <div class="banner-content">
+        <h1>به ملکیران خوش آمدید!</h1>
+        <p>اجاره خانه در سرتاسر ایران</p>
+        <form action="#" class="form-inline">
+          <input type="text" class="form-control input-lg" placeholder="ورود">
+          <input type="text" class="form-control input-lg" placeholder="تخلیه">
+          <select name="" id="" class="form-control input-lg">
+            <option value="1">۱</option>
+            <option value="2">۲</option>
+            <option value="3">۳</option>
+              <option value="4">۴</option>
+            <option value="5">+۵</option>
+
+          </select>
+          <input type="submit" class="btn btn-primary" value="بگرد">
+        </form>
+      </div>
+    </div>
+    <div class="container text-center padded features">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="{% static 'main/images/iran.png' %}" alt="">
+
+          <h2>ایران را کشف کنید!</h2>
+          <p>همه جای ایران سرای شماست.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="{% static 'main/images/dollar.png' %}" alt="">
+          <h2>آنلاین پرداخت کنید!</h2>
+          <p>دیگر نیازی به اسکناس نیست.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="{% static 'main/images/beer.png' %}" alt="">
+          <h2>با آدم های جدید آشنا شوید!</h2>
+          <p>فرهنگ های ایران را بیشتر بشناسید.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="{% static 'main/images/heart.png' %}" alt="">
+          <h2>عشق بورزید!</h2>
+          <p>ایران دوست داشتنی.</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper-grey padded">
+      <div class="container">
+        <h2 class="text-center">کجا می خواهید بروید؟</h2>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url({% static 'main/images/card-kavir.jpg' %});">
+              <div class="card-category">کویر های زیبای ایران</div>
+              <div class="card-description">
+                <h2>دشت کویر</h2>
+                <p>خانه های طبس</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url({% static 'main/images/card-uraman.jpg' %});">
+              <div class="card-category ml-auto">اورامان</div>
+              <div class="card-description ml-auto">
+                <h2>خانه های پلکانی</h2>
+                <p>مردم خونگرم کردستان</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url({% static 'main/images/card-shomal.jpg' %});">
+              <div class="card-category mr-auto">شمال ایران</div>
+              <div class="card-description mr-auto">
+                <h2>طبیعت شمال</h2>
+                <p>خانه های شیروانی</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center padded" id="newsletter">
+      <h2>اخبار ما را دنبال کنید!</h2>
+      <p>آدرس ایمیل خود را با ما به اشتراک بگذارید</p>
+      <form class="form-inline justify-content-center">
+        <input type="email" class="form-control">
+        <input type="submit" value="آبونه" class="btn btn-primary">
+      </form>
+    </div>
+
+
 {%endblock content%}
