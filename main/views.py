@@ -13,3 +13,7 @@ def login(request):
 
 def register(request):
     return render(request, 'main/register.html')
+
+
+def result(request) :
+    return render(request, 'main/result.html')
