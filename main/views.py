@@ -17,3 +17,7 @@ def register(request):
 
 def result(request) :
     return render(request, 'main/result.html')
+
+
+def home_register(request):
+    return render(request, 'main/home-register.html')
