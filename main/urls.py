@@ -7,5 +7,9 @@ urlpatterns = [
     path('register', views.register, name="register"),
     path('result', views.result, name="result"),
     path('home-register', views.home_register, name="home-register"),
-    path('userhomes', views.userhomes, name="userhomes"),
+    path('user-home-rented', views.user_home_rented, name="user-home-rented"),
+    path('profile', views.profile, name='profile'),
+    path('user-home-renting', views.user_home_rented, name="user-home-renting"),
+    path('user-home-active', views.user_home_active, name="user-home-active"),
+
 ]

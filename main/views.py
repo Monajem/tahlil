@@ -22,5 +22,16 @@ def result(request) :
 def home_register(request):
     return render(request, 'main/home-register.html')
 
-def userhomes(request):
-    return render(request, 'main/userhomes.html')
+
+def user_home_rented(request):
+    return render(request, 'main/user-home-rented.html')
+
+
+def profile(request):
+    return render(request, 'main/profile-base.html')
+
+def user_home_renting(request):
+    return render(request, 'main/user-home-renting.html')
+
+def user_home_active(request):
+    return render(request, 'main/user-home-active.html')
