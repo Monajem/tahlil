@@ -788,3 +788,8 @@ textarea.input100 {
 #img-upload{
     width: 100%;
 }
+
+.img-padding{
+    padding: 10px;
+}
+
