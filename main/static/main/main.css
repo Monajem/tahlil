@@ -28,6 +28,7 @@ nav{
 }
 
 .card-detail{
+    width: 100%
     display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -880,4 +881,8 @@ textarea.input100 {
 
 .comment-padded{
     padding: 10px
+}
+
+.home-detail-margin{
+    margin-left: 1%
 }
