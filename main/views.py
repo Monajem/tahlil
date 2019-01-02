@@ -21,3 +21,6 @@ def result(request) :
 
 def home_register(request):
     return render(request, 'main/home-register.html')
+
+def userhomes(request):
+    return render(request, 'main/userhomes.html')
