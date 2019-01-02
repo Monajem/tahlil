@@ -22,7 +22,6 @@ def result(request) :
 def home_register(request):
     return render(request, 'main/home-register.html')
 
-
 def user_home_rented(request):
     return render(request, 'main/user-home-rented.html')
 
@@ -38,3 +37,7 @@ def user_home_active(request):
 
 def about(request):
     return render(request, 'main/about.html')
+
+def home_detail(request):
+    return render(request, 'main/home-detail.html')
+

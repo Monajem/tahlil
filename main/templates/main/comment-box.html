@@ -1,0 +1,89 @@
+{% load static %}
+
+<div class="container">
+    <div class="row">
+        <h2>Feedback</h2>
+        <table class = "justify-content-center" width="100%" border="0">
+            <div class="col-md-12">
+                <tr>
+                    <td width="100%">
+                        <div class="justify-content-center">
+                            <form class="form-horizontal" action="send.php" method="post">
+                                <fieldset>
+
+                                    <!-- Name input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="name">Full Name</label>
+                                        <div class="col-md-9">
+                                            <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <!-- Email input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="email">Your E-mail</label>
+                                        <div class="col-md-9">
+                                            <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <!-- Message body -->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="message">Your message</label>
+                                        <div class="col-md-9">
+                                            <textarea class="form-control" id="message" name="message" placeholder="Please enter your feedback here..." rows="5"></textarea>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Rating -->
+
+
+                                </fieldset>
+                            </form>
+                            <!-- Form actions -->
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-md">Submit</button>
+                                    <button type="reset" class="btn btn-default btn-md">Clear</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </div>
+        </table>
+    </div>
+</div>
+
+<div class="container comment-padded">
+
+	<div class="card-comment">
+	    <div class="card-body">
+	        <div class="row">
+        	    <div class="col-md-2">
+        	        <img src="{% static 'main/images/default-avatar.png'%}" class="img img-fluid"/>
+                                        <br><br>
+        	        <p class="text-secondary text-center">15 Minutes Ago</p>
+        	    </div>
+        	    <div class="col-md-10">
+        	        <p>
+        	            <a class="float-right" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman Akash</strong></a>
+        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+                        <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+
+        	       </p>
+        	       <div class="clearfix"></div>
+                    <br><br>
+        	        <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        	        <p>
+                        <br>
+        	            <a class="float-left btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+        	       </p>
+        	    </div>
+	        </div>
+	    </div>
+	</div>
+</div>

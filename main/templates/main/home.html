@@ -8,8 +8,8 @@
         <p>اجاره خانه در سرتاسر ایران</p>
         <form action="#" class="form-inline">
           <input type="text" class="form-control input-lg" placeholder="شهر">
-          <input type="text" class="form-control input-lg" placeholder="ورود">
-          <input type="text" class="form-control input-lg" placeholder="تخلیه">
+          <input type="text" class="form-control input-lg" id="test-date-id" placeholder="تاریخ ورود">
+          <input type="text" class="form-control input-lg" id="test-date-id-2" placeholder="تاریخ تخلیه">
           <select name="" id="" class="form-control input-lg">
               <option value="1">۱</option>
               <option value="2">۲</option>
@@ -90,5 +90,9 @@
       </form>
     </div>
 
+<script>
+    kamaDatepicker('test-date-id', { buttonsColor: "red", forceFarsiDigits: true });
+    kamaDatepicker('test-date-id-2', { buttonsColor: "red", forceFarsiDigits: true });
+</script>
 
 {%endblock content%}
