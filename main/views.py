@@ -35,3 +35,6 @@ def user_home_renting(request):
 
 def user_home_active(request):
     return render(request, 'main/user-home-active.html')
+
+def about(request):
+    return render(request, 'main/about.html')
