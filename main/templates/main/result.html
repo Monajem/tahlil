@@ -20,12 +20,12 @@
         </div>
         <!-- /.col-lg-3 -->
 
-          <div class="col-md-9 ">
+          <div class="col-md-9 my-4">
 
-         <form action="#" class="form-inline  ">
-          <input type="text" class="form-control input-md" placeholder="شهر">
-          <input type="text" class="form-control input-md" placeholder="ورود">
-          <input type="text" class="form-control input-md" placeholder="تخلیه">
+         <form action="#" class="form-inline">
+          <input type="text" class="form-control input-md " placeholder="شهر">
+          <input type="text" class="form-control input-md" id="test-date-id" placeholder="ورود">
+          <input type="text" class="form-control input-md" id="test-date-id-2" placeholder="تخلیه">
           <select name="" id="" class="form-control input-md">
               <option value="1">۱</option>
               <option value="2">۲</option>
@@ -39,7 +39,7 @@
 
 
 
-          <div class="row">
+          <div class="row my-4">
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
@@ -49,7 +49,7 @@
                     <a href="#"> اولین </a>
                   </h4>
                   <h5> 50 هزار تومان</h5>
-                  <p class="card-text"> پنجاه و هفت متری، نو ساز، مبله، در بهترین محله جواهرکلا!</p>
+                  <p> پنجاه و هفت متری، نو ساز، مبله، در بهترین محله جواهرکلا! </p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -129,7 +129,7 @@
                     <a href="#">ششمین</a>
                   </h4>
                   <h5> پنجاه هزار تومان</h5>
-                  <p class="card-text">پنجاه و هفت متری، نو ساز، مبله، در بهترین محله جواهرکلا!</p>
+                  <p>پنجاه و هفت متری، نو ساز، مبله، در بهترین محله جواهرکلا!</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -149,7 +149,10 @@
     </div>
 
 
-
+<script>
+    kamaDatepicker('test-date-id', { buttonsColor: "red", forceFarsiDigits: true });
+    kamaDatepicker('test-date-id-2', { buttonsColor: "red", forceFarsiDigits: true });
+</script>
 
 
 

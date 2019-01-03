@@ -1,87 +1,64 @@
 {% load static %}
 
-<div class="container">
-    <div class="row">
-        <h2>ثبت نظر</h2>
-        <table class = "justify-content-center" width="100%" border="0">
-            <div class="col-md-12">
-                <tr>
-                    <td width="100%">
-                        <div class="justify-content-center">
-                            <form class="form-horizontal" action="send.php" method="post">
-                                <fieldset>
-
-                                    <!-- Name input-->
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" for="name">نام</label>
-                                        <div class="col-md-9">
-                                            <input id="name" name="name" type="text" placeholder="نام شما ..." class="form-control">
-                                        </div>
-                                    </div>
-
-                                    <!-- Email input-->
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" for="email">ایمیل</label>
-                                        <div class="col-md-9">
-                                            <input id="email" name="email" type="text" placeholder="ایمیل شما ..." class="form-control">
-                                        </div>
-                                    </div>
-
-                                    <!-- Message body -->
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" for="message">پیام</label>
-                                        <div class="col-md-9">
-                                            <textarea class="form-control" id="message" name="message" placeholder="نظر خود را بنویسید ..." rows="5"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <!-- Rating -->
-
-                                </fieldset>
-                            </form>
-                            <!-- Form actions -->
-                            <div class="form-group">
-                                <div class="col-md-12 text-center">
-                                    <button type="submit" class="btn btn-primary btn-md">ثبت</button>
-                                    <button type="reset" class="btn btn-default btn-md">پاک سازی</button>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </div>
-        </table>
-    </div>
-</div>
-
 <div class="container comment-padded">
-
-	<div class="card-comment">
-	    <div class="card-body">
-	        <div class="row">
-        	    <div class="col-md-2">
-        	        <img src="{% static 'main/images/default-avatar.png'%}" class="img img-fluid"/>
-                                        <br><br>
-        	        <p class="text-secondary text-center">15 دقیقه پیش</p>
-        	    </div>
-        	    <div class="col-md-10">
-        	        <p>
-        	            <a class="float-right" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>کوروش هخامنشی</strong></a>
-        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+    <div class="card-comment">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="{% static 'main/images/default-avatar.png'%}" class="img img-fluid"/>
+                    <br><br>
+                    <p class="text-secondary text-center">15 دقیقه پیش</p>
+                </div>
+                <div class="col-md-10">
+                    <p>
+                        <a class="float-right" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>کوروش هخامنشی</strong></a>
                         <span class="float-left"><i class="text-warning fa fa-star"></i></span>
-        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
-        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+                        <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+                        <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+                        <span class="float-left"><i class="text-warning fa fa-star"></i></span>
 
-        	       </p>
-        	       <div class="clearfix"></div>
+                    </p>
                     <br><br>
                     <p>به عنوان یک پادشاه باید بگویم که عالی بود</p>
                     <p>
                         <br>
-        	            <a class="float-left btn text-white btn-danger"> <i class="fa fa-heart"></i> می پسندم!</a>
-        	       </p>
-        	    </div>
-	        </div>
-	    </div>
-	</div>
+                        <a class="float-left btn text-white btn-danger"> <i class="fa fa-heart"></i> می پسندم!</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container border reviewbox-padded mb-2">
+    <h2>ثبت نظر</h2>
+    <div class="row justify-content-center">
+        <form class="form col-10" method="POST">
+            <!-- Name input-->
+            <div class="form-group">
+                <label class=" control-label" for="name"> نام</label>
+                <input type="text" placeholder="نام شما ..." class=" form-control">
+            </div>
+            <!-- Email input-->
+            <div class="form-group">
+                <label class=" control-label" for="email">ایمیل</label>
+                <input id="email" name="email" type="text" placeholder="ایمیل شما ..." class="form-control">
+            </div>
+            <!-- Message body -->
+            <div class="form-group">
+                <label class="control-label" for="message">پیام</label>
+                <textarea class="float-center form-control" id="message" name="message" placeholder="نظر خود را بنویسید ..." rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary btn-md">ثبت</button>
+                <button type="reset" class="btn btn-default btn-md">پاک سازی</button>
+            </div>
+        </div>
+        </form>
+        <!-- Form actions -->
+
+    </div>
 </div>
