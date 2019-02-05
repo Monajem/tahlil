@@ -37,10 +37,22 @@
 
 
 <body>
-{% include 'main/navbars/anonymous.html'%}
+
+{% if user.is_authenticated %}
+    {% include 'main/navbars/user.html'%}
+{% else %}
+    {% include 'main/navbars/anonymous.html'%}
+{% endif %}
+
+{% if user.melkuser.is_blocked %}
+
+<h2> متاسفانه شما قابلیت دسترسی به این صفحه را ندارید.</h2>
+
+{% else %}
 
 {% block content %}{% endblock%}
 
+{% endif %}
 <div id="footer">
     <div class="container">
         <div class="row">
