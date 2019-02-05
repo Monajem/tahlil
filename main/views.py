@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from django.views.generic import ListView, DetailView, CreateView
+from .models import House
 # Create your views here.
 
 
@@ -7,36 +8,27 @@ def home(request):
     return render(request, 'main/home.html')
 
 
-def login(request):
-    return render(request, 'main/login.html')
+def result(request):
+    return render(request, 'main/house_list.html')
 
 
-def register(request):
-    return render(request, 'main/register.html')
+class HouseListView(ListView):
+    model = House
+    context_object_name = 'houses'
 
 
-def result(request) :
-    return render(request, 'main/result.html')
+class HouseCreateView(CreateView):
+    model = House
+    fields = ['title', 'city', 'address', 'room', 'price', 'comment']
 
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        return super().form_valid(form)
 
-def home_register(request):
-    return render(request, 'main/home-register.html')
-
-def user_home_rented(request):
-    return render(request, 'main/user-home-rented.html')
-
-
-def profile(request):
-    return render(request, 'main/profile-base.html')
-
-def user_home_renting(request):
-    return render(request, 'main/user-home-renting.html')
-
-def user_home_active(request):
-    return render(request, 'main/user-home-active.html')
 
 def about(request):
     return render(request, 'main/about.html')
+
 
 def home_detail(request):
     return render(request, 'main/home-detail.html')
