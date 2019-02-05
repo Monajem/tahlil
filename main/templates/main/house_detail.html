@@ -22,28 +22,32 @@
             <aside class="col-md-1"></aside>
             <aside class="col-md-6">
                 <article class="card-body">
-                    <h3 class="title mb-3">اقامتگاه بوم گردی ورزنه</h3>
+                    <h3 class="title mb-3">{{house.title}}</h3>
                     <p class="price-detail-wrap">
 	                    <span class="price h3 text-warning">
-		                    <span class="currency"></span><span class="num">50 هزار</span>
+		                    <span class="currency"></span><span class="num">{{house.price}}</span>
 	                    </span>
-                        <span>هر شب</span>
+                        <span>تومان هر شب</span>
                     </p> <!-- price-detail-wrap .// -->
                     <dl class="param param-feature">
+                        <dt>شهر</dt>
+                        <dd><p>{{house.city}}  </p></dd>
+                    </dl>
+                    <dl class="param param-feature">
                         <dt>آدرس</dt>
-                        <dd><p>اصفهان روستای ورزنه کوچه خالقی اقامتگاه بوم گردی  </p></dd>
+                        <dd><p>{{house.address}}  </p></dd>
                     </dl>
                     <dl class="param param-feature">
                         <dt>متراژ</dt>
-                        <dd>اتاق های 20 متری</dd>
+                        <dd>{{house.space}}</dd>
                     </dl>  <!-- item-property-hor .// -->
                     <dl class="param param-feature">
                         <dt>تعداد اتاق</dt>
-                        <dd>1</dd>
+                        <dd>{{house.room}}</dd>
                     </dl>  <!-- item-property-hor .// -->
                     <dl class="param param-feature">
                         <dt>توضیحات</dt>
-                        <dd>از معروف ترین خانه های بومی اصفهان، دارای قدمت 200 ساله</dd>
+                        <dd>{{house.comment}}</dd>
                     </dl>  <!-- item-property-hor .// -->
                     <hr>
                     <a href="#" class="btn btn-lg btn-primary text-uppercase"> اجاره </a>
@@ -53,8 +57,6 @@
     </div> <!-- card.// -->
 </div>
 <!--container.//-->
-
-{% include 'main/comment-box.html'%}
 
 
 {% endblock content %}

@@ -44,7 +44,7 @@
                   <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                   <div class="card-body">
                     <h4 class="card-title">
-                      <a href="#"> {{house.title}} </a>
+                      <a href="{% url 'home-detail' house.id%}"> {{house.title}} </a>
                     </h4>
                     <h5> قیمت : {{house.price}}</h5>
                     <h5> تعداد اتاق : {{house.room}}</h5>

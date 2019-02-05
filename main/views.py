@@ -26,10 +26,12 @@ class HouseCreateView(CreateView):
         return super().form_valid(form)
 
 
+class HouseDetailView(DetailView):
+    model = House
+    context_object_name = 'house'
+
+
 def about(request):
     return render(request, 'main/about.html')
 
-
-def home_detail(request):
-    return render(request, 'main/home-detail.html')
 
