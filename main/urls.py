@@ -8,4 +8,6 @@ urlpatterns = [
     path('home-register', HouseCreateView.as_view(), name="home-register"),
     path('about', views.about, name="about"),
     path('home-detail/<int:pk>/', HouseDetailView.as_view(), name="home-detail"),
+    path('staty', views.staty, name="staty"),
 ]
+

@@ -35,3 +35,6 @@ def about(request):
     return render(request, 'main/about.html')
 
 
+def staty(request):
+    return render(request, 'main/staty.html')
+
