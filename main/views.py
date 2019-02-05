@@ -41,3 +41,5 @@ def about(request):
 def home_detail(request):
     return render(request, 'main/home-detail.html')
 
+def staty(request):
+    return render(request, 'main/staty.html')

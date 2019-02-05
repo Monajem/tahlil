@@ -1,0 +1,17 @@
+{% load request_tag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAN CAN CAN</title>
+</head>
+<body>
+
+{% active_users in 100 minutes as user_list %}
+{% for user in user_list %}
+    {{ user.username }} <head5>ddd</head5>
+{% endfor %}
+
+
+</body>
+</html>

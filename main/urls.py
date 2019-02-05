@@ -13,5 +13,7 @@ urlpatterns = [
     path('user-home-active', views.user_home_active, name="user-home-active"),
     path('about', views.about, name="about"),
     path('home-detail', views.home_detail, name="home-detail"),
+    path('staty', views.staty, name="staty"),
+
 
 ]
