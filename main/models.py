@@ -59,3 +59,6 @@ class Rent(models.Model):
     begin_date = models.DateField()
     end_date = models.DateField()
     paid = models.BooleanField(default=False)
+
+    class Meta:
+        unique_together = (('user', 'house', 'begin_date', 'end_date'))

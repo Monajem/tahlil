@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView, CreateView
 from .models import House, Rent
 from .forms import RentForm, SearchForm
+from django.contrib import messages
 # Create your views here.
 
 
@@ -40,21 +41,35 @@ def staty(request):
     return render(request, 'main/staty.html')
 
 
+def is_possible(form, pk):
+    rents = Rent.objects.filter(house=House.objects.get(pk=pk))
+    for rent in rents:
+        if rent.begin_date <= form.cleaned_data['end_date'] and rent.end_date  >= form.cleaned_data['begin_date']:
+            return False
+    return True
+
+
 def rent(request, pk):
     if request.method == 'POST':
         form = RentForm(request.POST)
         if form.is_valid():
-            new_tx = Rent.objects.create(
-                user = request.user,
-                house = House.objects.get(pk=pk),
-                begin_date = form.cleaned_data['begin_date'],
-                end_date = form.cleaned_data['end_date'],
-            )
-            tx_id = new_tx.id
-            house = House.objects.get(pk=pk)
-            house.reserved +=1
-            house.save()
-            return render(request, 'main/pay.html', {'tx_id': tx_id})
+            if form.cleaned_data['end_date'] > form.cleaned_data['begin_date']:
+                if is_possible(form, pk):
+                    new_tx = Rent.objects.create(
+                        user = request.user,
+                        house = House.objects.get(pk=pk),
+                        begin_date = form.cleaned_data['begin_date'],
+                        end_date = form.cleaned_data['end_date'],
+                    )
+                    tx_id = new_tx.id
+                    house = House.objects.get(pk=pk)
+                    house.reserved +=1
+                    house.save()
+                    return render(request, 'main/pay.html', {'tx_id': tx_id})
+                else:
+                    messages.error(request, f'خانه در تاریخ مد نظر شما اجاره رفته است')
+            else:
+                messages.error(request, f'تاریخ تعیین شده اشتباه است.')
     else:
         form = RentForm()
     return render(request, 'main/rent_home.html', context={'form': form})

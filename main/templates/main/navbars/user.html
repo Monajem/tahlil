@@ -3,13 +3,22 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'home'%}">خانه <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'home'%}">صفحه اصلی <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href=" {% url 'about'%} " >درباره ما</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=" {% url 'search'%} " >جستجو</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=" {% url 'house-list'%} " >خانه ها</a>
+            </li>
         </ul>
         <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home-register' %}"> ثبت خانه </a>
+            </li>
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'logout' %}"> خروج &nbsp;<i class="fa fa-sign-out-alt"></i></a>
             </li>
