@@ -50,7 +50,11 @@
                         <dd>{{house.comment}}</dd>
                     </dl>  <!-- item-property-hor .// -->
                     <hr>
-                    <a href="#" class="btn btn-lg btn-primary text-uppercase"> اجاره </a>
+
+                    {%if user.is_authenticated%}
+                        <a href="{%url 'home-rent' house.id%}" class="btn btn-lg btn-primary text-uppercase"> اجاره </a>
+                    {% endif %}
+
                 </article> <!-- card-body.// -->
             </aside> <!-- col.// -->
         </div> <!-- row.// -->

@@ -1,8 +1,14 @@
-from django.db import models
-from django.contrib.auth.models import User
-from django.urls import reverse
+from django import forms
+from django.forms import ModelForm
+from .models import Rent
 
-class House(models.Model):
+
+class RentForm(forms.Form):
+    begin_date = forms.DateField(input_formats=['%d/%m/%Y', '%m/%d/%Y',])
+    end_date = forms.DateField(input_formats=['%d/%m/%Y', '%m/%d/%Y',])
+
+
+class SearchForm(forms.Form):
     CITIES = (
         ('تهران', 'تهران'),
         ( 'اراک', 'اراک'),
@@ -39,23 +45,4 @@ class House(models.Model):
         ('شاهرود', 'شاهرود'),
         ('سبزوار', 'سبزوار'),
     )
-    title = models.CharField(max_length=100)
-    city = models.CharField(max_length=50, choices=CITIES, blank=True)
-    address = models.TextField()
-    room = models.IntegerField()
-    price = models.IntegerField()
-    space = models.IntegerField(default=0)
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    comment = models.TextField()
-    reserved = models.IntegerField(default=0)
-
-    def get_absolute_url(self):
-        return reverse('home-detail', kwargs={'pk': self.pk})
-
-
-class Rent(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    house = models.ForeignKey(House, on_delete=models.CASCADE)
-    begin_date = models.DateField()
-    end_date = models.DateField()
-    paid = models.BooleanField(default=False)
+    city = forms.ChoiceField(choices=CITIES)

@@ -9,5 +9,9 @@ urlpatterns = [
     path('about', views.about, name="about"),
     path('home-detail/<int:pk>/', HouseDetailView.as_view(), name="home-detail"),
     path('staty', views.staty, name="staty"),
+    path('rent/<int:pk>/', views.rent, name="home-rent"),
+    path('pay/<int:pk>', views.pay, name="pay"),
+    path('rent-success/', views.rent_success, name="rent-success"),
+    path('search/', views.search, name="search"),
 ]
 
