@@ -3,6 +3,7 @@ from django.views.generic import ListView, DetailView, CreateView
 from .models import House, Rent
 from .forms import RentForm, SearchForm
 from django.contrib import messages
+from request.models import Request
 # Create your views here.
 
 
@@ -38,7 +39,16 @@ def about(request):
 
 
 def staty(request):
-    return render(request, 'main/staty.html')
+    total_visit = Request.objects.count()
+    firstVisit = Request.objects.filter(path='/').count()
+    error_hits = total_visit - Request.objects.filter(response=200).count()
+    admin_visit = Request.objects.filter(path='/admin/').count()
+
+
+
+    context = {'tv': total_visit, 'fv': firstVisit, 'eh':error_hits, 'av':admin_visit}
+    return render(request, 'main/staty.html', context=context)
+
 
 
 def is_possible(form, pk):
